@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('images/msec1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    display: none;
+    position: relative;
+}
+
+.form-container.active {
+    display: block; 
+}
+
+.form-container h2 {
+    color: tomato;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.group input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.tomato-btn {
+    width: 95%;
+    padding: 10px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.tomato-btn:hover {
+    background-color: lightcoral;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.form-container p {
+    text-align: center;
+    color: #555;
+}
+
+.form-container p a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .form-container {
+        padding: 25px;
+        max-width: 450px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .group input {
+        width: 95%;
+    }
+
+    button.tomato-btn {
+        margin-top: 25px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .close-icon {
+        font-size: 18px;
+    } 
+}
+
+@media only screen and (max-width: 570px) {
+    body {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .form-container {
+        padding: 10px;
+        border-radius: 8px;
+        max-width: 300px;
+    }
+
+    .form-container h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .group input {
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    button.tomato-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .close-icon {
+        font-size: 16px;
+    }
+
+    .form-container p {
+        font-size: 12px;
+    }
+
+    .form-container p a {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prabhat Singh">
+    <meta name="description" content="This is a login_signup page.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+    <title>Login_Signup Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="signup-form">
+            <i class="fa-solid fa-xmark close-icon" id="close-signup" onclick="redirectToIndex()"></i>
+            <h2>Sign Up</h2>
+            <form action="https://httpbin.org" method="get">
+                <div class="group">
+                    <label for="signup-fullname">Full Name</label>
+                    <input type="text" id="signup-fullname" placeholder="Enter Full Name">
+                </div>
+                <div class="group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter Email">
+                </div>
+                <div class="group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create Password">
+                </div>
+                <div class="group">
+                <label for="signup-confirm-password">Confirm Password</label>
+                <input type="password" id="signup-confirm-password" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="tomato-btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="switch-to-signin">Sign In</a></p>
+        </div>
+
+        <div class="form-container" id="signin-form">
+            <i class="fa-solid fa-xmark close-icon" id="close-signin" onclick="redirectToIndex()"></i>
+            <h2>Sign In</h2>
+            <form>
+                <div class="group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" id="signin-email" placeholder="Enter Your Email">
+                </div>
+                <div class="group">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" placeholder="Enter Password">
+                </div>
+                <button type="submit" class="tomato-btn">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
